@@ -1,0 +1,157 @@
+
+.testimonio-clientes-helados{
+    background:linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)),url('./../../../../assets/img/imagen-testimonio.jpg') no-repeat;
+    box-sizing: border-box;
+    background-size: 100% 100%;
+    height: 600px;
+}
+.titulo-testimonio-clientes{
+    color: #821110;
+    font-family: 'Amita', cursive;
+    font-size: 26px;
+    text-align: center;
+    margin: 20px 0;
+}
+.carousel{
+    width: 100%;
+    padding: 20px 50px;
+    margin-top: 100px;
+}
+.card-testimonio-helado{
+    display: grid;
+    justify-content: center;
+}
+
+.foto-testimonio-helado{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    justify-self: center;
+    margin-bottom: 10px;
+}
+.foto-testimonio-helado img {
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+
+.descripcion-testimonio-helado{
+    color: white;
+    font-size: 18px;
+    font-family: 'Amita', cursive;
+    margin-bottom: 10px;
+}
+
+.nav-carousel-testimonio{
+    position: relative;
+    margin-top: 100px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.nav-carousel-testimonio::before{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -1px;
+    width: 100%;
+    height: 1px;
+    content: "";
+    display: inline-block;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+.nav-prev, .nav-next {
+    
+    margin-right: 10px;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    font: 400 30px/24px "Material Design Icons";
+    color: #9b9b9b;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-prev:before, .nav-next:before {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.nav-prev:after, .nav-next:after {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: center;
+    content: '';
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 250ms;
+    font-size: 0;
+    line-height: 0;
+    z-index: 0;
+    background-color:#821110;
+}
+.nav-carousel-testimonio:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92px;
+    background-color: transparent;
+}
+
+.carousel-control-prev{
+    width: 100%;
+    margin-left: -3px;
+}
+
+.carousel-control-next{
+    width: 100%;
+    margin-right: -6px;
+}
+
+button{
+    outline: none;
+}
+
+.nav-prev:hover::after,.nav-next:hover::after{
+    background-color: #caa600;
+}
+
+
+@media(max-width:767px){
+
+    .carousel{
+        margin: auto;
+    }
+
+    .foto-testimonio-helado{
+        border-radius: 100%;
+        height: 50px;
+        width: 50px;
+        justify-self: center;
+    }
+    .foto-testimonio-helado img {
+        border-radius: 100%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .nav-carousel-testimonio{
+        margin:auto;
+    }
+}

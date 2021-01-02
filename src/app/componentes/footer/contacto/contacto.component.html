@@ -1,0 +1,25 @@
+ <form #form="ngForm" [formGroup]="formContacto" (ngSubmit)="enviarContactor()" >
+    <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input formControlName="nombre" matInput #input maxlength="10" placeholder="Nombre" >
+        <mat-error *ngIf="nombre.hasError('required')">Por favor ingrese un nombre</mat-error>
+
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Telefono</mat-label>
+        <input  formControlName="telefono" matInput #input type="number" placeholder="Teléfono" >
+        <mat-error *ngIf="telefono.hasError('required')">Por favor ingrese un número de teléfono</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput #input maxlength="10" placeholder="Email">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Mensaje</mat-label>
+        <textarea formControlName="mensaje" matInput #input  placeholder="Mensaje" ></textarea>
+        <mat-error *ngIf="mensaje.hasError('required')">Dejanos un mensaje</mat-error>
+    </mat-form-field>
+    <button mat-stroked-button  type="submit" class="button-style" title="Enviar"  >
+        Enviar
+    </button>
+</form>

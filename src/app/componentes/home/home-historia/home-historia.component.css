@@ -1,0 +1,89 @@
+.imagenes-historia-helados{
+    display:flex;
+    box-sizing: border-box;
+}
+
+.imagenes-historia-helados img {
+    width: 45%;
+    height: 450px;
+}
+
+.imagen-cremas-helados {
+    position: relative;
+    top: -23px;
+    left: -4px;
+}
+
+.imagen-paleta-fruta-helados {
+    position: relative;
+    left: -10vw;
+}
+
+.imagen-paleta-crema-helados {
+    position: relative;
+    left: -18vw;
+    top: 20px;
+}
+.historia-helados-el-rey{
+    color: #821110;
+}
+.historia-titulo{
+    color: #821110;
+    margin-bottom: 20px;
+    padding-bottom:5px;
+    position: relative;
+}
+.historia-titulo::after{
+    content:"";
+    height: 5px;
+    width: 117px;
+    background: #821110;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.estilo-icono-helados{
+    font-size: 40px;
+    color:#821110 ;
+}
+.section-icon-helados{
+    display: flex;
+}
+.section-icon-helados i{
+    font-size: 35px;
+    position: relative;
+    top: -10px;
+    color:#821110 ;
+}
+.contacto-helados-el-rey{
+    margin: 0 0 0 10px ;
+    color: #821110;
+}
+.contacto-helados-el-rey a{
+    color: #821110;
+}
+
+.contacto-helados-el-rey a:hover{
+    color: #caa600;
+}
+
+.col-xs-4{
+    padding: 0;
+}
+
+@media (max-width:758px){
+
+    .imagenes-historia-helados img {
+        width: 40%;
+        height: 400px;
+    }
+    .imagen-paleta-crema-helados {
+        position: relative;
+        left: -17vw;
+        top: 20px;
+    }
+}

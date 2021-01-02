@@ -1,0 +1,133 @@
+
+.box{
+    margin-top: 10px;
+}
+#header-logo{
+    margin: 0;
+}
+.navbar-expand-lg {
+    box-shadow:  0  3px 3px  rgb(130, 17, 16,0.5);
+}
+
+.active-menu{
+    font-size: 16px;
+    transition: background-color 1s;
+    box-shadow:  0  3px 0px  rgb(202, 166, 0,0.5);
+    font-weight: bold;
+}
+
+.active-menu a.nav-link{
+   color:  #caa600 !important;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container-fluid {
+    padding-right: 20rem;
+    padding-left: 20rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #821110;
+    font-weight: 700;
+}
+
+
+li{
+    text-align: center;
+}
+
+.sticky-navbar-helados-transparent{
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+}
+
+.sticky-navbar-helados-blanco{
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+    z-index: 1;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+   color:  #caa600;
+}
+
+@media(max-width:992px){
+   
+    #header-logo{
+        display: none;
+    }
+
+    .container-fluid {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .navbar-light .navbar-toggler {
+        border-color:  #821110;
+    }
+    
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: 0 0 0 0.05rem  #821110;
+    }
+    
+    #span-helados-el-rey{
+        color: #821110;
+        font-weight: 700;
+    }
+
+    #span-helados-el-rey img{
+        width: 80px;
+        height: 50px;
+    }
+}
+
+@media (min-width:992px){
+    
+    .logo-helados-el-rey{
+        position: relative;
+        display: inline-block;
+        color: #1d1d1d;
+        text-align: left;
+    }
+
+    #span-helados-el-rey{
+        display: none;
+    }
+   
+    .logo-helados-el-rey::after{
+        position: absolute;
+        right: -150px;
+        top: 15px;
+        margin-top: -1px;
+        content: "";
+        display: inline-block;
+        height: 3px;
+        width: 150px;
+        background-image: linear-gradient(to left, #821110, #ffffff);
+        opacity: .3;
+    }
+        
+    .logo-helados-el-rey::before{
+        position: absolute;
+        left: -420px;
+        top: 15px;
+        margin-top: -1px;
+        content: "";
+        display: inline-block;
+        height: 3px;
+        width: 150px;
+        background-image: linear-gradient(to right, #821110, #ffffff);
+        opacity: .3;
+    }
+    
+}
