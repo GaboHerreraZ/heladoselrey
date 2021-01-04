@@ -1,0 +1,33 @@
+.contacto-imagen-heladeria-el-rey {
+    background-image: url('../../../assets/img/contacto/contacto-helados-el-rey.jpg');
+    background-size: 100% 800px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: -10%;
+}
+.encabezado-contacto{
+    position: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: auto;
+}
+.descripcion-contacto-helados-el-rey{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: 'Amita', cursive;
+    color: #821110;
+}
+.titulo-contacto{
+    font-family: 'Amita', cursive;
+    color: #821110;
+    font-size: 32px;
+}
+
+.formulario-contacto-helados-el-rey{
+    margin-top: 30px;
+}

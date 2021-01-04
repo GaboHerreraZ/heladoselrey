@@ -1,5 +1,6 @@
 import { Component, ViewChild, Renderer2, ElementRef, OnInit } from '@angular/core';
 import { fromEvent } from 'rxjs';
+import { RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',

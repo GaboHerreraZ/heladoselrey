@@ -154,4 +154,8 @@ button{
     .nav-carousel-testimonio{
         margin:auto;
     }
+
+    .testimonio-clientes-helados{
+        height: 650px;
+    }
 }

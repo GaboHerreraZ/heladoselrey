@@ -1,6 +1,10 @@
+.margin-nuestra-historia{
+    margin-top: 70px;
+}
 .imagenes-historia-helados{
     display:flex;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .imagenes-historia-helados img {
