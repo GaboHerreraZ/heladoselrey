@@ -28,8 +28,13 @@
     left: -18vw;
     top: 20px;
 }
+.info-contacto{
+    margin-top: 50px;
+}
+
 .historia-helados-el-rey{
     color: #821110;
+    padding-right: 20px;
 }
 .historia-titulo{
     color: #821110;
@@ -77,6 +82,9 @@
 
 .col-xs-4{
     padding: 0;
+}
+.historia-helados-el-rey p{
+    text-align: justify;
 }
 
 @media (max-width:758px){

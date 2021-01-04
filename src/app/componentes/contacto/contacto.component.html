@@ -1,33 +1,77 @@
 <div class="contacto-imagen-heladeria-el-rey"></div>
-<section class="encabezado-contacto">
-    <div class="row center-xs">
-        <div class="col-xs-6">
-            <div class="box">
-                <h4 class="titulo-contacto">Contacto</h4>
-                <p class="descripcion-contacto-helados-el-rey">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+    <section class="encabezado-contacto">
+        <div class="row center-xs">
+            <div class="col-xs-8">
+                <div class="box">
+                    <h4 class="titulo-contacto">Contacto</h4>
+                    <p class="descripcion-contacto-helados-el-rey">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="formulario-contacto-helados-el-rey">
-    <div class="row">
-            <div class="col-md-6">
-                <div class="box">
-                    <section class="detalle-contacto">
-                        <h4 >
-
-                        </h4>
-                    </section>
+    </section>
+    <section class="formulario-contacto-helados-el-rey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box">
+                        <section class="formulario-contacto">
+                            <h4 class="titulo-contacto">
+                                    ¿Nos estás buscando?
+                            </h4>
+                            <p class="descripcion-busqueda-helados">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            </p>
+                            <address class="direccion-helados-el-rey">
+                                <p class="ubicacion-direccion"><span>Estamos</span> ubicados en:</p>
+                                <div class="header-direccion">
+                                    <p><strong>Dirección:</strong> Calle 57 #36 e 95 - Barrio santander</p>
+                                    <p><strong>Telefonos:</strong>602395785 - 311 521 3140 <span><img src="./assets/img/whatsapp.png" alt=""></span></p>
+                                    <p><strong>Email:</strong>heladoselrey@gmail.com</p>
+                                </div>
+                            </address>
+                        </section>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="box">
-                    <section class="formulario-contacto">
-                        <h4 class="titulo-contacto"></h4>
-                    </section>
+                <div class="col-md-6">
+                    <div class="box">
+                        <section class="formulario-contacto">
+                            <h4 class="titulo-contacto">
+                                Solicita más información:
+                            </h4>
+                            <form #form="ngForm" [formGroup]="formContacto" (ngSubmit)="enviarContactor()" >
+                                <mat-form-field>
+                                    <mat-label>Nombre</mat-label>
+                                    <input formControlName="nombre" matInput #input maxlength="10" placeholder="Nombre" >
+                                    <mat-error *ngIf="nombre.hasError('required')">Por favor ingrese un nombre</mat-error>
+                            
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <mat-label>Telefono</mat-label>
+                                    <input  formControlName="telefono" matInput #input type="number" placeholder="Teléfono" >
+                                    <mat-error *ngIf="telefono.hasError('required')">Por favor ingrese un número de teléfono</mat-error>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <mat-label>Email</mat-label>
+                                    <input formControlName="email" matInput #input maxlength="10" placeholder="Email">
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <mat-label>Mensaje</mat-label>
+                                    <textarea formControlName="mensaje" matInput #input  placeholder="Mensaje" ></textarea>
+                                    <mat-error *ngIf="mensaje.hasError('required')">Dejanos un mensaje</mat-error>
+                                </mat-form-field>
+                                <button mat-stroked-button  type="submit" class="button-style" title="Enviar"  >
+                                    Enviar
+                                </button>
+                            </form>
+                        </section>
+                    </div>
                 </div>
-            </div>
-    </div>
-</section>
-
-
+        </div>
+        <section class="ubicacion-maps-helados-el-rey">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5317926063294!2d-73.84073468584822!3d7.06416641860298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4293558053620b%3A0x8beb0a283f6f4da9!2sCl.%2054%20%2336e-95%2C%20Barrancabermeja%2C%20Santander%2C%20Colombia!5e0!3m2!1ses-419!2ses!4v1609781443726!5m2!1ses-419!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </section>
+        </div>
+    </section>
+    
+    
+    
