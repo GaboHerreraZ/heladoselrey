@@ -8,7 +8,7 @@ $my-custom-theme-background: (
   app-bar: map_get($mat-blue, 900),
   background: #821210,
   hover: rgba(#821210, 0.04),
-  card: map_get($mat-red, 800),
+  card: white,
   dialog: #821210,
   disabled-button:#821210,
   raised-button: #821210,

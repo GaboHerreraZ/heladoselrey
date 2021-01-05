@@ -1,5 +1,6 @@
 .margin-nuestra-historia{
-    margin-top: 70px;
+    margin-top: 130px;
+    background-color: white;
 }
 .imagenes-historia-helados{
     display:flex;
@@ -9,24 +10,25 @@
 
 .imagenes-historia-helados img {
     width: 45%;
-    height: 450px;
+    height: 500px;
 }
 
 .imagen-cremas-helados {
     position: relative;
-    top: -23px;
     left: -4px;
 }
 
 .imagen-paleta-fruta-helados {
     position: relative;
     left: -10vw;
+    top: 20px;
+
 }
 
 .imagen-paleta-crema-helados {
     position: relative;
     left: -18vw;
-    top: 20px;
+    top: 40px;
 }
 .info-contacto{
     margin-top: 50px;
@@ -38,6 +40,7 @@
 }
 .historia-titulo{
     color: #821110;
+    margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom:5px;
     position: relative;
@@ -97,5 +100,8 @@
         position: relative;
         left: -17vw;
         top: 20px;
+    }
+    .margin-nuestra-historia{
+        margin-top: auto;
     }
 }

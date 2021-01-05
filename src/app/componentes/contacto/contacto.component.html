@@ -1,9 +1,8 @@
 <div class="contacto-imagen-heladeria-el-rey"></div>
     <section class="encabezado-contacto">
-        <div class="row center-xs">
+        <div class="row center-xs middle-xs">
             <div class="col-xs-8">
                 <div class="box">
-                    <h4 class="titulo-contacto">Contacto</h4>
                     <p class="descripcion-contacto-helados-el-rey">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
                 </div>
             </div>
@@ -38,12 +37,20 @@
                             <h4 class="titulo-contacto">
                                 Solicita más información:
                             </h4>
-                            <form #form="ngForm" [formGroup]="formContacto" (ngSubmit)="enviarContactor()" >
+                            <form #form="ngForm" [formGroup]="formContacto" (submit)="enviarContactor()" >
+                                <mat-form-field>
+                                    <mat-label>Asunto</mat-label>
+                                    <mat-select formControlName="asunto" placeholder="Asunto">
+                                      <mat-option value="Cotización">Cotización</mat-option>
+                                      <mat-option value="Punto de venta">Punto de venta</mat-option>
+                                      <mat-option value="Distribuidor">Distribuidor</mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="asunto.hasError('required')">Por favor ingrese el asunto</mat-error>
+                                  </mat-form-field>
                                 <mat-form-field>
                                     <mat-label>Nombre</mat-label>
                                     <input formControlName="nombre" matInput #input maxlength="10" placeholder="Nombre" >
                                     <mat-error *ngIf="nombre.hasError('required')">Por favor ingrese un nombre</mat-error>
-                            
                                 </mat-form-field>
                                 <mat-form-field>
                                     <mat-label>Telefono</mat-label>

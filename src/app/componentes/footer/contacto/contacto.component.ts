@@ -15,7 +15,6 @@ export class ContactoComponent implements OnInit {
   get nombre(): AbstractControl { return this.formContacto.get('nombre'); }
   get telefono(): AbstractControl { return this.formContacto.get('telefono'); }
   get mensaje(): AbstractControl { return this.formContacto.get('mensaje'); }
-  matcher = new MyErrorStateMatcher();
 
   constructor(private fb: FormBuilder) { }
 
@@ -24,25 +23,20 @@ export class ContactoComponent implements OnInit {
   }
 
   enviarContactor(): void {
-    console.log(this.formContacto.value);
+    if (this.formContacto.invalid){
+      return;
+    }
     this.form.resetForm();
-    console.log(this.formContacto);
   }
 
   createFormContacto(): FormGroup {
     return  this.fb.group({
-      nombre: ['', Validators.required],
-      telefono: ['', Validators.required],
+      nombre: ['', [Validators.required]],
+      telefono: ['', [Validators.required]],
       email: [''],
-      mensaje: ['', Validators.required]
+      mensaje: ['', [Validators.required]]
     });
   }
 
-}
 
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-  }
 }
