@@ -14,6 +14,18 @@ const routes: Routes = [
     {
       path: 'contacto',
       loadChildren: () => import('./componentes/contacto/contacto.module').then(m => m.ContactoModule)
+    },
+    {
+      path: 'nuestros-productos',
+      loadChildren: () => import('./componentes/producto/producto.module').then(m => m.ProductoModule)
+    },
+    {
+      path: 'solicitar-pedido',
+      loadChildren: () => import('./componentes/solicitar-pedido/solicitar-pedido.module').then(m => m.SolicitarPedidoModule)
+    },
+    {
+      path: 'quienes-somos',
+      loadChildren: () => import('./componentes/quienes-somos/quienes-somos.module').then(m => m.QuienesSomosModule)
     }
   ]
 },
