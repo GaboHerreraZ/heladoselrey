@@ -1,0 +1,132 @@
+.card-producto{
+    background-color: white;
+    height: 450px;
+    box-shadow: 0 2px 1px -1px rgba(130,17,16,.2), 0 1px 1px 0 rgba(130,17,16,.14), 0 1px 3px 0 rgba(130,17,16,.12);
+    border-radius: 3px;
+    transition: transform 0.2s;
+}
+
+.card-producto:hover{
+   transform: scale(1.05);
+}
+.carousel{
+    margin: 40px 40px;
+}
+.box{
+    padding: 20px 20px;
+}
+.titulo-producto{
+
+}
+
+.img-producto{
+    max-width: 100%;
+    width: 100%;
+    height: 350px;
+    border-radius: 3px;
+}
+
+.nav-prev, .nav-next {
+    margin-right: 10px;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    font: 400 30px/24px "Material Design Icons";
+    color: #9b9b9b;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-prev:before, .nav-next:before {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-prev:after, .nav-next:after {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: center;
+    content: '';
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 250ms;
+    font-size: 0;
+    line-height: 0;
+    z-index: 0;
+    background-color:#821110;
+}
+
+.nav-carousel-producto:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92px;
+    background-color: transparent;
+}
+
+.carousel-control-prev{
+    width: 100%;
+    margin-left: -3px;
+}
+
+.carousel-control-next{
+    width: 100%;
+    margin-right: -6px;
+}
+
+button{
+    outline: none;
+}
+
+.nav-prev:hover::after,.nav-next:hover::after{
+    background-color: #caa600;
+}
+
+.nav-carousel-producto{
+    position: relative;
+    margin-top: 50px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.nav-carousel-producto::before{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -1px;
+    width: 100%;
+    height: 1px;
+    content: "";
+    display: inline-block;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+
+@media(max-width:767px){
+
+    .carousel{
+        margin: auto;
+    }
+
+
+    .nav-carousel-producto{
+        margin:auto;
+    }
+
+    .testimonio-clientes-helados{
+        height: 650px;
+    }
+}
