@@ -14,7 +14,6 @@ import { AngularMaterialModule } from 'src/app/shared/module/angular-material/an
     CommonModule,
     ComunModule,
     ProductoRoutingModule,
-    AngularMaterialModule
   ]
 })
 export class ProductoModule { }

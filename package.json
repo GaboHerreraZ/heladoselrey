@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "analyzer": "npx webpack-bundle-analyzer dist/base-app/stats.json",
+    "git-deploy": "ng deploy --base-href=https://gaboherreraz.github.io/heladoselrey/"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +28,7 @@
     "bootstrap-icons": "^1.2.2",
     "flexboxgrid": "^6.3.1",
     "jquery": "^3.5.1",
+    "ngx-quicklink": "^0.2.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -48,6 +51,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "webpack-bundle-analyzer": "^4.4.0"
   }
 }

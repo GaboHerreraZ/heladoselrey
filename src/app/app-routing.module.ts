@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PaginasComponent } from './componentes/paginas.component';
-
+import {  QuicklinkStrategy } from 'ngx-quicklink';
 const routes: Routes = [
  {
   path: 'inicio',
@@ -9,11 +9,13 @@ const routes: Routes = [
   children: [
     {
       path: '',
-      loadChildren: () => import('./componentes/home/home.module').then(m => m.HomeModule)
+      loadChildren: () => import('./componentes/home/home.module').then(m => m.HomeModule),
+      data: { preload: true}
     },
     {
       path: 'contacto',
-      loadChildren: () => import('./componentes/contacto/contacto.module').then(m => m.ContactoModule)
+      loadChildren: () => import('./componentes/contacto/contacto.module').then(m => m.ContactoModule),
+      data: { preload: true}
     },
     {
       path: 'nuestros-productos',
@@ -42,7 +44,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes,
+    {
+      useHash: true,
+      preloadingStrategy: QuicklinkStrategy
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

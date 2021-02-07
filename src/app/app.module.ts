@@ -13,6 +13,8 @@ import { ContactoComponent } from './componentes/footer/contacto/contacto.compon
 import { PaginasComponent } from './componentes/paginas.component';
 import { LoadingComponent } from './shared/loading/loading/loading.component';
 import { LoadingService } from './shared/loading/loading-shaerd/loading-shared.service';
+import { QuicklinkModule } from 'ngx-quicklink';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { LoadingService } from './shared/loading/loading-shaerd/loading-shared.s
     BrowserAnimationsModule,
     AngularMaterialModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QuicklinkModule
   ],
   providers: [LoadingService],
   bootstrap: [AppComponent],
